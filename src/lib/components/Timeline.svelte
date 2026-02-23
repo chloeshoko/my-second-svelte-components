@@ -62,7 +62,7 @@ USAGE EXAMPLE:
   @use '../styles' as *;
 
   .timeline {
-    margin-top: var(--spacing-xl);
+    margin-top: 0;
     margin-bottom: var(--spacing-xl); 
     padding: 0 var(--spacing-md) var(--spacing-md);
     border: var(--border-width-thin) solid var(--color-border);
@@ -90,8 +90,8 @@ USAGE EXAMPLE:
 
   .timeline-item {
     position: relative;
-    margin-left: var(--spacing-sm);
-    padding: 0 0 var(--spacing-md) var(--spacing-md);
+    margin-left: var(--spacing-xs);
+    padding: 0 0 var(--spacing-md) var(--spacing-sm);
 
     &:last-child {
       padding-bottom: 0;
@@ -100,8 +100,8 @@ USAGE EXAMPLE:
     &::before {
       content: '';
       position: absolute;
-      top: 0.35rem;
-      left: calc(-1 * var(--spacing-sm));
+      top: calc(var(--font-size-xs) + var(--spacing-xs) + 0.4rem);
+      left: calc(-1 * var(--spacing-xs));
       width: 0.5rem;
       height: 0.5rem;
       border-radius: 50%;
@@ -116,6 +116,7 @@ USAGE EXAMPLE:
     font-family: var(--font-sans);
     font-size: var(--font-size-xs);
     font-weight: 700;
+    line-height: 1;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--color-accent);

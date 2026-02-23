@@ -14,6 +14,7 @@ This is your page!
   import AuthorBio from '$lib/components/AuthorBio.svelte';
   import KeyTakeaways from '$lib/components/KeyTakeaways.svelte';
   import Timeline from '$lib/components/Timeline.svelte';
+  import ContextBox from '$lib/components/ContextBox.svelte';
 
   // Article metadata
   let headline = 'Become a force for good. Join our next class.';
@@ -53,6 +54,12 @@ This is your page!
       date: '2025-08-01',
       description: 'Chloe Shōko Rogers begins her first semester in Newmark\'s Master of Journalism program.'
     }
+  ];
+
+  const contextItems = [
+    'The school was launched as legacy newsrooms were adapting to digital-first publishing.',
+    'Its model combines traditional reporting standards with tools for audience and product strategy.',
+    'Expanded scholarship support lowers cost barriers for students entering journalism careers.'
   ];
 </script>
 
@@ -107,6 +114,13 @@ This is your page!
     <p>
       We fashioned a school to teach the latest storytellisng, entrepreneurial, and technological skills alongside reporting, writing, and ethics. Beyond that, we’ve crafted a culture that spurns complacency, that isn’t afraid to pivot before the ground under us shifts.
     </p>
+
+    <ContextBox
+      title="Why This Matters"
+      items={contextItems}
+      sourceLabel="Learn more about Newmark J-School"
+      sourceHref="https://www.journalism.cuny.edu/"
+    />
 
     <p>
       Our mission is to serve the public interest – by training new journalists from varied economic, racial, and cultural backgrounds who will bring much-needed diversity to newsrooms, by helping mid-career journalists retool their skills, and by partnering with other media organizations to find new paths to excellence.
