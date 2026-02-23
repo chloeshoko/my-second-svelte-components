@@ -15,6 +15,7 @@ This is your page!
   import KeyTakeaways from '$lib/components/KeyTakeaways.svelte';
   import Timeline from '$lib/components/Timeline.svelte';
   import ContextBox from '$lib/components/ContextBox.svelte';
+  import { asset } from '$app/paths';
 
   // Article metadata
   let headline = 'Become a force for good. Join our next class.';
@@ -167,7 +168,7 @@ This is your page!
   />
 
   <AuthorBio
-    photoSrc="/chloephoto.jpg"
+    photoSrc={asset('/chloephoto.jpg')}
     photoAlt="NYCity News Service author portrait"
     name="Chloe Shōko Rogers"
     title="Health, Science, Arts & Culture reporter"
