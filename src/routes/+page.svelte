@@ -8,6 +8,12 @@ This is your page!
   import ArticleBody from '$lib/components/ArticleBody.svelte';
   import Image from '$lib/components/Image.svelte';
   import RelatedLinks from '$lib/components/RelatedLinks.svelte';
+  import Blockquote from '$lib/components/Blockquote.svelte';
+  import BigNumber from '$lib/components/BigNumber.svelte';
+  import Dashboard from '$lib/components/Dashboard.svelte';
+  import AuthorBio from '$lib/components/AuthorBio.svelte';
+  import KeyTakeaways from '$lib/components/KeyTakeaways.svelte';
+  import Timeline from '$lib/components/Timeline.svelte';
 
   // Article metadata
   let headline = 'Become a force for good. Join our next class.';
@@ -19,6 +25,34 @@ This is your page!
     { headline: 'How America\'s top news organizations escape rigid publishing systems to design beautiful data-driven stories on deadline.', href: 'https://palewi.re/docs/coding-the-news/' },
     { headline: 'How to install, configure and use Visual Studio Code, GitHub and Copilot', href: 'https://palewi.re/docs/coding-the-news/scripts/week-1/' },
     { headline: "How to publish a website with Node.JS and GitHub Actions", href:"https://palewi.re/docs/coding-the-news/scripts/week-2/"},
+  ];
+
+  const authorSocialLinks = [
+    { label: 'X', href: 'https://x.com/journalismcuny' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/chloe-shoko-rogers/' },
+    { label: 'Instagram', href: 'https://www.instagram.com/therealchloerogers/' },
+  ];
+
+  const keyTakeaways = [
+    'The school was founded in 2006 to respond to rapid changes in journalism.',
+    'Affordable tuition and donor support expand access to graduate journalism education.',
+    'Students train in reporting, ethics, technology, and entrepreneurial storytelling.',
+    'The program emphasizes public-interest journalism and newsroom diversity.'
+  ];
+
+  const timelineEvents = [
+    {
+      date: '2006-01-01',
+      description: 'The Craig Newmark Graduate School of Journalism is founded in New York City.'
+    },
+    {
+      date: '2019-01-01',
+      description: 'The school expands its public-interest mission through new media center initiatives.'
+    },
+    {
+      date: '2025-08-01',
+      description: 'Chloe Shōko Rogers begins her first semester in Newmark\'s Master of Journalism program.'
+    }
   ];
 </script>
 
@@ -46,6 +80,24 @@ This is your page!
     credit="Craig Newmark Graduate School of Journalism"
   />
 
+  <Dashboard>
+  <BigNumber
+    number="2006"
+    label="Year Founded"
+  />
+
+  <BigNumber
+    number="1,300"
+    label="Alumni"
+  />
+
+  <BigNumber
+    number="50%"
+    label="Attend tuition free"
+    footnote="As of Aug. 2025"
+  />
+</Dashboard>
+
   <!-- Article Body: The main story text with proper typography -->
   <ArticleBody>
     <p>
@@ -53,7 +105,7 @@ This is your page!
     </p>
 
     <p>
-      We fashioned a school to teach the latest storytelling, entrepreneurial, and technological skills alongside reporting, writing, and ethics. Beyond that, we’ve crafted a culture that spurns complacency, that isn’t afraid to pivot before the ground under us shifts.
+      We fashioned a school to teach the latest storytellisng, entrepreneurial, and technological skills alongside reporting, writing, and ethics. Beyond that, we’ve crafted a culture that spurns complacency, that isn’t afraid to pivot before the ground under us shifts.
     </p>
 
     <p>
@@ -64,6 +116,11 @@ This is your page!
       Our low tuition rates, along with the added backing of private donors, allow candidates for our master’s degrees in journalism and engagement journalism to receive a world-class education at an affordable price. We also offer a unique bilingual master’s in journalism for students fluent in English and Spanish.
     </p>
 
+    <Timeline
+    title="School Timeline"
+    events={timelineEvents}
+    />
+
     <p>
       Our three media centers provide research, training, thought leadership, industry meet-ups, and financial support for quality journalistic work.
     </p>
@@ -71,6 +128,11 @@ This is your page!
     <p>
       We also offer a robust professional education program through regular evening and weekend workshops. And we support in-depth reporting projects of professional journalists through fellowship grants.
     </p>
+
+    <Blockquote
+      quote="If you surrendered to the air, you could ride it."
+      attribution="Toni Morrison"
+    />
 
     <p>
       Classes are led by accomplished full-time faculty and adjuncts, who tap their networks to help students and graduates find internships, freelance opportunities and — the ultimate prize — jobs.
@@ -84,6 +146,19 @@ This is your page!
       We invite you to be part of our world.
     </p>
   </ArticleBody>
+
+  <KeyTakeaways
+    title="Key Takeaways"
+    items={keyTakeaways}
+  />
+
+  <AuthorBio
+    photoSrc="/chloephoto.jpg"
+    photoAlt="NYCity News Service author portrait"
+    name="Chloe Shōko Rogers"
+    title="Health, Science, Arts & Culture reporter"
+    socialLinks={authorSocialLinks}
+  />
 
   <!-- Related Stories: Links to other articles -->
   <RelatedLinks
