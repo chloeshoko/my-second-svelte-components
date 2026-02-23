@@ -9,7 +9,7 @@ This is your page!
   import Image from '$lib/components/Image.svelte';
   import RelatedLinks from '$lib/components/RelatedLinks.svelte';
   import Blockquote from '$lib/components/Blockquote.svelte';
-  import BigNumber from '$lib/components/BigNumber.svelte';
+  import BigNumber from '$lib/components/Bignumber.svelte';
   import Dashboard from '$lib/components/Dashboard.svelte';
   import AuthorBio from '$lib/components/AuthorBio.svelte';
   import KeyTakeaways from '$lib/components/KeyTakeaways.svelte';
