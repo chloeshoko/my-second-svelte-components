@@ -18,8 +18,8 @@ This is your page!
 
   // Article metadata
   let headline = 'Become a force for good. Join our next class.';
-  let byline = 'NYCity News Service';
-  let pubDate = '2026-01-31';
+  let byline = 'Chloe Shōko Rogers';
+  let pubDate = '2026-02-23';
 
   // Related stories
   const relatedStories = [
