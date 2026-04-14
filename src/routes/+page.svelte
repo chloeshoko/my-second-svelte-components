@@ -85,7 +85,7 @@ This is your page!
     src="/example-photo.gif"
     alt="The Craig Newmark Graduate School of Journalism is at 219 West 40th Street in Midtown Manhattan."
     caption="The Craig Newmark Graduate School of Journalism is at 219 West 40th Street in Midtown Manhattan."
-    credit="Craig Newmark Graduate School of Journalism"
+    credit="Craig Newmark Graduate School of Journalism!"
   />
 
   <Dashboard>
